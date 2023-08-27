@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./InputShortener.css"
 // import { db } from "./firebase";
 // import { v4 as uuidv4 } from "uuid";
 
