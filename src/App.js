@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import BackgroundAnimate from './Components/BackgroundAnimate';
-import InputShortener from './Components/InputShortener';
-import LinkResult from './Components/LinkResult';
+import BackgroundAnimate from "./Components/BackgroundAnimate";
+import InputShortener from "./Components/InputShortener";
+import LinkResult from "./Components/LinkResult";
 
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
@@ -24,13 +24,9 @@ function App() {
       } else setUserName("");
     });
   }, []);
-  
 
   return (
     <div className="container">
-      <InputShortener setInputValue={setInputValue} />
-      <BackgroundAnimate />
-      <LinkResult inputValue={inputValue} />
       <Router>
         <Routes>
           <Route exact path="/" element={<Login />} />
@@ -38,16 +34,12 @@ function App() {
           <Route exact path="/signup" element={<Signup />} />
           {/* <Route exact path="/" element={<Home name={userName} />} /> */}
         </Routes>
-        
       </Router>
-      
+      <InputShortener setInputValue={setInputValue} />
+      <BackgroundAnimate />
+      <LinkResult inputValue={inputValue} />
     </div>
   );
 }
 
 export default App;
-
-
-
-
-
