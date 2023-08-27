@@ -4,10 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BackgroundAnimate from './Components/BackgroundAnimate';
 import InputShortener from './Components/InputShortener';
 import LinkResult from './Components/LinkResult';
+
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
+
 import { auth } from "./firebase.js";
+
 import "./App.css";
 
 function App() {
@@ -26,20 +29,21 @@ function App() {
     <div className="container">
       <Router>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/" element={<Home name={userName} />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/" element={<Home name={userName} />} />
         </Routes>
       </Router>
-      {userName && (
-        <>
-          <InputShortener setInputValue={setInputValue} />
-          <BackgroundAnimate />
-          <LinkResult inputValue={inputValue} />
-        </>
-      )}
+      <InputShortener setInputValue={setInputValue} />
+      <BackgroundAnimate />
+      <LinkResult inputValue={inputValue} />
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
