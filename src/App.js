@@ -24,19 +24,23 @@ function App() {
       } else setUserName("");
     });
   }, []);
+  
 
   return (
     <div className="container">
-      <Router>
-        <Routes>
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/signup" element={<Signup />} />
-          <Route exact path="/" element={<Home name={userName} />} />
-        </Routes>
-      </Router>
       <InputShortener setInputValue={setInputValue} />
       <BackgroundAnimate />
       <LinkResult inputValue={inputValue} />
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Login />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/signup" element={<Signup />} />
+          {/* <Route exact path="/" element={<Home name={userName} />} /> */}
+        </Routes>
+        
+      </Router>
+      
     </div>
   );
 }
