@@ -4,13 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BackgroundAnimate from './Components/BackgroundAnimate';
 import InputShortener from './Components/InputShortener';
 import LinkResult from './Components/LinkResult';
-
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
-
 import { auth } from "./firebase.js";
-
 import "./App.css";
 
 function App() {
@@ -26,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="container">
       <Router>
         <Routes>
           <Route path="/login" element={<Login />} />
