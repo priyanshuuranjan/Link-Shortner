@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route,Navigate } from "react-router-dom";
 
 import BackgroundAnimate from "./Components/BackgroundAnimate";
 import InputShortener from "./Components/InputShortener";
@@ -16,11 +16,14 @@ import "./App.css";
 function App() {
   const [userName, setUserName] = useState("");
   const [inputValue, setInputValue] = useState("");
+   const [user, setUser] = useState(null);
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
+     
       if (user) {
         setUserName(user.displayName);
+         setUser(user);
       } else setUserName("");
     });
   }, []);
