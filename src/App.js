@@ -29,10 +29,10 @@ function App() {
     <div className="container">
       <Router>
         <Routes>
-          <Route exact path="/" element={<Login />} />
+          {/* <Route exact path="/" element={<Login />} /> */}
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/signup" element={<Signup />} />
-          {/* <Route exact path="/" element={<Home name={userName} />} /> */}
+          <Route exact path="/" element={<Home name={userName} />} />
         </Routes>
       </Router>
       <InputShortener setInputValue={setInputValue} />

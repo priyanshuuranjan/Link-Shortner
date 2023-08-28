@@ -1,19 +1,22 @@
 import { useState } from "react";
-import "./InputShortener.css"
-// import { db } from "./firebase";
-// import { v4 as uuidv4 } from "uuid";
+import "./InputShortener.css";
+// import { getFirestore } from "firebase/firestore";
+import { db } from "../firebase";
+import { v4 as uuidv4 } from "uuid";
+import { collection, addDoc } from "firebase/firestore"; 
 
 const InputShortener = ({ setInputValue }) => {
   const [value, setValue] = useState("");
 
   // To get value and Store data in firebase
   const handleClick = async (e) => {
-    // e.preventDefault();
-    // let id = uuidv4();
+    e.preventDefault();
+    let id = uuidv4();
     // await db.collection("urls").add({
     //   url: value,
     //   id: id,
     // });
+    await addDoc(collection(db, "urls"), { url: value, id: id });
     setInputValue(value);
     setValue("");
   };
