@@ -16,14 +16,13 @@ import "./App.css";
 function App() {
   const [userName, setUserName] = useState("");
   const [inputValue, setInputValue] = useState("");
-   const [user, setUser] = useState(null);
+
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
      
       if (user) {
         setUserName(user.displayName);
-         setUser(user);
       } else setUserName("");
     });
   }, []);
