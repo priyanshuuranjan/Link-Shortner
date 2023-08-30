@@ -24,6 +24,8 @@
   width: 40px !important;
   height: 38px !important;
 } */
+/*
+
 .container {
   height: 80vh;
   display: flex;
@@ -71,8 +73,9 @@
   border: none;
   cursor: pointer;
 }
+*/
 
-/* Result */
+/*  
 .result {
   display: flex;
   align-items: center;
@@ -101,7 +104,7 @@
   font-size: 1rem;
 }
 
-/* background animate */
+// background animate 
 @keyframes animate {
   0%{
       transform: translateY(0) rotate(0deg);
@@ -231,3 +234,4 @@
   bottom: -98px;
   animation-delay: 6s;
 }
+*/

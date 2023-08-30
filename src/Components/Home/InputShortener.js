@@ -1,10 +1,9 @@
 import { useState } from "react";
-import "./InputShortener.css";
 // import { getFirestore } from "firebase/firestore";
 import { db } from "../../firebase";
 import { v4 as uuidv4 } from "uuid";
 import { collection, addDoc } from "firebase/firestore";
-import "./InputShortener.css";
+// import "./InputShortener.css";
 
 const InputShortener = ({ setInputValue }) => {
   const [value, setValue] = useState("");
