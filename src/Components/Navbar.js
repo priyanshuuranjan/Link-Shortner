@@ -6,6 +6,11 @@ import "./Navbar.css";
 import { auth } from "../firebase.js";
 
 const Navbar = () => {
+  function toggleDropdown() {
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.classList.toggle('active');
+  }
+
   const [userName, setUserName] = useState("");
   const [inputValue, setInputValue] = useState("");
   const { logOut, user } = useUserAuth();
@@ -32,7 +37,7 @@ const Navbar = () => {
         <a href="#"></a>
       </div>
       <div class="dropdown">
-        <a>{userName ? ` ${userName}` : ""}</a>
+        <a onClick={toggleDropdown}>{userName ? ` ${userName}` : "" }</a>
         <div className="dropdown-content">
           <a href="#">Profile</a>
           <a onClick={handleLogout}>Logout</a>

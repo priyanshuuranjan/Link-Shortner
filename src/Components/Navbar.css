@@ -7,8 +7,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:#333333;
-  padding: 10px 20px;
+  background-color: #333;
+  /* Border color */
+  padding: 15px 20px;
   color: white;
 }
 .navbar a {
@@ -23,21 +24,29 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #333;
-  min-width: 120px;
+  background-color: white; /* Initial background color */
+  margin-top: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Card-like shadow */
   z-index: 1;
+  border-radius: 12px;
 }
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
+  /* Green background on click */
   display: block;
+  /* background-color: #539fe5; */
+  background-color: #0972d3;
 }
 .dropdown-content a {
   color: white;
-  padding: 12px 16px;
+  padding: 10px 18px;
   text-decoration: none;
-  display: block;
+  display: flex;
+  border-radius: 20px;
 }
 .dropdown-content a:hover {
   background-color: #444;
+  width: 100%;
 }
 .navbar button {
   background-color: #555;
