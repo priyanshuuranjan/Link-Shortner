@@ -7,7 +7,7 @@ import { auth } from "../../firebase.js";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../../context/UserAuthContext";
-
+import "./InputShortener.css";
 function Home(props) {
   const [userName, setUserName] = useState("");
   const [inputValue, setInputValue] = useState("");
@@ -31,7 +31,7 @@ function Home(props) {
   }, []);
   return (
     <>
-    {/* <div className="container">
+    <div className="container">
       <div className="p-4 box mt-3 text-center">
         Hello Welcome <br />
         {user && user.email}
@@ -40,14 +40,14 @@ function Home(props) {
         <Button variant="primary" onClick={handleLogout}>
           Log out
         </Button>
-      </div> */}
+      </div>
 
       <h2>{userName ? `Welcome - ${userName}` : "Login please"}</h2>
 
       <InputShortener setInputValue={setInputValue} />
       <LinkResult inputValue={inputValue} />
       <BackgroundAnimate />
-    {/* </div> */}
+    </div>
     </>
   );
 }
