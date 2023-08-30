@@ -28,6 +28,7 @@ body {
   margin-top: 15px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Card-like shadow */
   z-index: 1;
+  min-width: 160px;
   border-radius: 12px;
 }
 .dropdown:hover .dropdown-content,
