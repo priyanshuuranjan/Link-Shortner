@@ -2,6 +2,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home/Home";
+import Navbar from "./Components/Navbar";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import ProtectedRoute from "./Components/ProtectedRoute";
@@ -17,6 +18,8 @@ function App() {
               path="/home"
               element={
                 <ProtectedRoute>
+                  
+                  <Navbar/>
                   <Home />
                 </ProtectedRoute>
               }

@@ -31,6 +31,8 @@ function Home(props) {
     });
   }, []);
   return (
+    <>
+   
     <div className="container">
 <div className="p-4 box mt-3 text-center">
         Hello Welcome <br />
@@ -48,6 +50,7 @@ function Home(props) {
       <LinkResult inputValue={inputValue} />
       <BackgroundAnimate />
     </div>
+    </>
   );
 }
 

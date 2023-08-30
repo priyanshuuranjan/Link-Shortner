@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
 
-const Home = () => {
+const Navbar = () => {
   const { logOut, user } = useUserAuth();
   const navigate = useNavigate();
   const handleLogout = async () => {
@@ -16,11 +16,11 @@ const Home = () => {
   };
   return (
     <>
-      <div className="p-4 box mt-3 text-center">
-        Hello Welcome <br />
-        {user && user.email}
+      <div className="p-4 box mt-3 text-center" style={{ backgroundColor: "#f8f9fa", borderRadius: "5px" }}>
+        <h4 style={{ margin: 0 }}>Hello, Welcome</h4>
+        <p style={{ margin: 0 }}>{user && user.email}</p>
       </div>
-      <div className="d-grid gap-2">
+      <div className="d-grid gap-2 mt-3">
         <Button variant="primary" onClick={handleLogout}>
           Log out
         </Button>
@@ -29,4 +29,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Navbar;
