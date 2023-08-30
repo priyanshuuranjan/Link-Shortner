@@ -9,68 +9,26 @@ import { UserAuthContextProvider } from "./context/UserAuthContext";
 
 function App() {
   return (
-    <div style={{ width: "400px" }}>
-     
-          <UserAuthContextProvider>
-            <Router>
-            <Routes>
-              <Route
-                path="/home"
-                element={
-                  <ProtectedRoute>
-                    <Home />
-                  </ProtectedRoute>
-                }
-              />
-              <Route path="/" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-            </Routes>
-            </Router>
-          </UserAuthContextProvider>
-        
+    <div className="container">
+      <UserAuthContextProvider>
+        <Router>
+          <Routes>
+            <Route
+              path="/home"
+              element={
+                <ProtectedRoute>
+                  <Home />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </Router>
+      </UserAuthContextProvider>
     </div>
   );
 }
 
 export default App;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useEffect, useState } from "react";
-// import { BrowserRouter as Router, Routes, Route,Navigate } from "react-router-dom";
-
-// import Home from "./Components/Home/Home";
-
-
-// function App() {
-
-
-//   return (
-//     <div className="container">
-//       <Router>
-//         <Routes>
-//         {/* <Route exact path="/home" element={<protectedRoute><Home /></protectedRoute>} /> */}
-//           {/* <Route exact path="/" element={<Login />} /> */}
-         
-//           <Route exact path="/" element={<Home />} />
-        
-//         </Routes>
-//       </Router>
-    
-//     </div>
-//   );
-// }
-
-// export default App;
