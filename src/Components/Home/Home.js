@@ -12,37 +12,37 @@ function Home(props) {
   const [userName, setUserName] = useState("");
   const [inputValue, setInputValue] = useState("");
 
-  const { logOut, user } = useUserAuth();
-  const navigate = useNavigate();
-  const handleLogout = async () => {
-    try {
-      await logOut();
-      navigate("/");
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        setUserName(user.displayName);
-      } else setUserName("");
-    });
-  }, []);
+  // const { logOut, user } = useUserAuth();
+  // const navigate = useNavigate();
+  // const handleLogout = async () => {
+  //   try {
+  //     await logOut();
+  //     navigate("/");
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
+  //    useEffect(() => {
+  //   auth.onAuthStateChanged((user) => {
+  //     if (user) {
+  //       setUserName(user.displayName);
+  //     } else setUserName("");
+  //   });
+  // }, []);
   return (
     <>
     <div className="container">
-      <div className="p-4 box mt-3 text-center">
+      {/* <div className="p-4 box mt-3 text-center">
         Hello Welcome <br />
         {user && user.email}
-      </div>
-      <div className="d-grid gap-2">
+      </div> */}
+      {/* <div className="d-grid gap-2">
         <Button variant="primary" onClick={handleLogout}>
           Log out
         </Button>
-      </div>
+      </div> */}
 
-      <h2>{userName ? `Welcome - ${userName}` : "Login please"}</h2>
+      
 
       <InputShortener setInputValue={setInputValue} />
       <LinkResult inputValue={inputValue} />
