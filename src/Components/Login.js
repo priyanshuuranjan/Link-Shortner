@@ -4,6 +4,7 @@ import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../context/UserAuthContext";
+import styles from "./Login.module.css"; // Import the CSS module
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -34,46 +35,44 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="p-4 box">
-        <h2 className="mb-3">Firebase Auth Login</h2>
+    <div className={styles.container}>
+      <div className={styles.loginBox}>
+        <h2 className={styles.heading}>Login</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group controlId="formBasicEmail">
             <Form.Control
               type="email"
               placeholder="Email address"
+              className={styles.inputField}
               onChange={(e) => setEmail(e.target.value)}
             />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group controlId="formBasicPassword">
             <Form.Control
               type="password"
               placeholder="Password"
+              className={styles.inputField}
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
 
-          <div className="d-grid gap-2">
-            <Button variant="primary" type="Submit">
+          <div className={styles.btnContainer}>
+            <Button className={styles.loginBtn} type="submit">
               Log In
             </Button>
           </div>
         </Form>
-        <hr />
-        <div>
-          <GoogleButton
-            className="g-btn"
-            type="dark"
-            onClick={handleGoogleSignIn}
-          />
+        <div className={styles.orText}>OR</div>
+        <div className={styles.googleBtnContainer}>
+          <GoogleButton className={styles.googleBtn} type="dark" onClick={handleGoogleSignIn} />
+        </div>
+        <div className={styles.signupBox}>
+          <p className={styles.signupText}>Don't have an account? <Link to="/signup" className={styles.signupLink}>Sign up</Link></p>
         </div>
       </div>
-      <div className="p-4 box mt-3 text-center">
-        Don't have an account? <Link to="/signup">Sign up</Link>
-      </div>
-    </>
+    </div>
   );
 };
 

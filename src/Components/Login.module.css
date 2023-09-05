@@ -1,0 +1,97 @@
+/* Login.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.loginBox {
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum width for readability */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.heading {
+  font-size: 24px; /* Slightly reduce font size */
+  margin-bottom: 20px;
+  color: #333; /* Darken the text color for better readability */
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.loginBtn {
+  background-color: #007bff;
+  border: none;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.loginBtn:hover {
+  background-color: #0056b3;
+}
+
+.orText {
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.googleBtn {
+  margin-top: 20px; /* Add some space between the Google button and the rest */
+}
+
+.signupLink {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signupLink a:hover {
+  text-decoration: underline;
+}
+
+/* Login.module.css */
+.signupBox {
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signupText {
+  font-size: 16px;
+  color: #333;
+}
+
+.signupLink {
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signupLink:hover {
+  text-decoration: underline;
+}
