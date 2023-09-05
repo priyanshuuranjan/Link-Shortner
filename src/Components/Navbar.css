@@ -49,7 +49,7 @@
 }
 
 .dropdown-item:hover {
-  background-color: #0972d3;
+  background-color: #2dcea6;
 }
 
 /* Button styles */
@@ -57,7 +57,7 @@
   background-color: #555;
   border: none;
   color: white;
-  padding: 7px 12px;
+  padding: 5px 12px;
   border-radius: 5px;
   cursor: pointer;
 }
